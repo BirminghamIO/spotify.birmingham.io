@@ -13,18 +13,28 @@
       background-attachment: fixed;
       background-position: bottom left;
     }
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <iframe src="https://embed.spotify.com/?uri=spotify:user:1142710174:playlist:5VXoJILccTsDKBKXSlNapP" width="300" height="380" frameborder="0" allowtransparency="true" class="centered"></iframe>
+  <div class='embed-container'><iframe src='https://embed.spotify.com/?uri=spotify:user:1142710174:playlist:5VXoJILccTsDKBKXSlNapP' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>
 
   <script>
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
